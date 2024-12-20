@@ -1,0 +1,57 @@
+/* استایل‌های عمومی برای اسلایدها */
+.productSwiper {
+  width: 100%;
+  height: 400px; /* ارتفاع اسلایدر */
+  position: relative;
+  overflow: hidden;
+}
+
+/* استایل برای جعبه محصول */
+.productBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* پس‌زمینه پارالاکس */
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* پس‌زمینه پشت محتوای محصول */
+}
+
+/* عنوان محصول */
+.title {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  z-index: 1;
+}
+
+/* توضیحات محصول */
+.subtitle {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+  z-index: 1;
+}
+
+/* قیمت محصول */
+.price {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff6347;
+  z-index: 1;
+}

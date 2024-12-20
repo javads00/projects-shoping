@@ -3,6 +3,9 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import "./@App/index.css";
+import "./@App/Product.css";
+
+import "swiper/swiper-bundle.css";
 
 import { PersistGate } from "redux-persist/integration/react";
 import { persistor, store } from "./store";

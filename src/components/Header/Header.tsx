@@ -15,12 +15,12 @@ export const Header: React.FC<HeaderInterface> = ({ user }) => {
   };
 
   return (
-    <header className="sticky top-0 z-10 w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 px-6 py-4 shadow-lg">
+    <header className="sticky top-0 z-50 w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 px-6 py-4 shadow-lg">
       <div className="flex items-center justify-between">
         {/* Left Section */}
         <div className="flex items-center gap-4">
           <Link
-            to="/wallet"
+            to="/"
             className="flex items-center gap-2 text-white transition-transform duration-200 ease-in-out hover:scale-105"
           >
             <Icon iconType="Home" className="h-6 w-6" />

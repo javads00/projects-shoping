@@ -8,7 +8,6 @@
   box-sizing: border-box;
 }
 @layer base {
-
   span,
   h1,
   h2,
@@ -22,7 +21,9 @@
 
 body,
 html {
-  margin: 0;
+  /* @apply bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500; */
+  height: 100vh; /* برای اطمینان از اینکه بدنه کل ارتفاع صفحه را می‌گیرد */
+  margin: 0; /* حذف حاشیه پیش‌فرض */
   font-family: "IRANSans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,4 +33,69 @@ html {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Container for the Swiper */
+.mySwiper {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Height of the slider */
+  border-radius: 10px; /* Add rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+}
+
+/* Style the images */
+.mySwiper .slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make sure images fill the entire container */
+  border-radius: 10px; /* Rounded corners for images */
+  transition: transform 0.5s ease; /* Smooth zoom-in effect */
+}
+
+/* Add hover effect for images */
+.mySwiper .slideImage:hover {
+  transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+/* Style the pagination bullets */
+.mySwiper .swiper-pagination {
+  bottom: 10px; /* Position pagination at the bottom */
+  text-align: center;
+}
+
+/* Style for individual pagination bullets */
+.mySwiper .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+  width: 12px; /* Smaller bullet size */
+  height: 12px;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth color and transform transition */
+}
+
+/* Style for active pagination bullet */
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #ff6347; /* Highlight active bullet with a color (Tomato) */
+  transform: scale(1.3); /* Slightly enlarge the active bullet */
+}
+
+/* Style for Swiper navigation buttons (optional) */
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: #fff; /* White color for the arrows */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for arrows */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Add hover effect for navigation arrows */
+.mySwiper .swiper-button-next:hover,
+.mySwiper .swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
 }

@@ -19,14 +19,14 @@ const quickAccessItems: Array<QuickAccessInterface> = [
   },
   {
     title: "شروع کار",
-    route: "/Request",
+    route: "/",
     icon: "ArrowTurnUp",
   },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="relative w-full overflow-hidden rounded-t-3xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 px-6 py-8">
+    <footer className="relative w-full overflow-hidden rounded-t-3xl mt-2 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 px-6 py-8">
       <div className="grid h-full w-full grid-cols-1 gap-8 md:grid-cols-3">
         {/* !Col-1 */}
         <div className="flex flex-col items-center gap-4">
