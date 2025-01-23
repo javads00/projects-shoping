@@ -9,6 +9,8 @@ export const Header: React.FC<HeaderInterface> = ({ user }) => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
+  console.log(user, "sadad");
+
   const handleLogout = () => {
     dispatch(logOutUser(null));
     navigate("/Login", { replace: true });
@@ -30,18 +32,25 @@ export const Header: React.FC<HeaderInterface> = ({ user }) => {
         {/* Right Section */}
         <div className="flex items-center gap-4">
           {user.accessToken && (
-            <Icon
-              iconType="Logout"
-              className="h-8 w-8 cursor-pointer text-white transition-transform duration-200 ease-in-out hover:scale-110"
-              onClick={handleLogout}
-            />
+            <>
+              <p>{`${user?.firstName} ${user?.lastName}`}</p>
+
+              <Icon
+                iconType="Logout"
+                className="h-8 w-8 cursor-pointer text-white transition-transform duration-200 ease-in-out hover:scale-110"
+                onClick={handleLogout}
+              />
+            </>
           )}
-          <Link
-            to="/Login"
-            className="rounded-full bg-white bg-opacity-20 px-4 py-2 text-sm font-medium text-white transition-transform duration-200 ease-in-out hover:scale-105"
-          >
-            ورود/ثبت‌نام
-          </Link>
+
+          {!user.accessToken && (
+            <Link
+              to="/Login"
+              className="rounded-full bg-white bg-opacity-20 px-4 py-2 text-sm font-medium text-white transition-transform duration-200 ease-in-out hover:scale-105"
+            >
+              ورود/ثبت‌نام
+            </Link>
+          )}
         </div>
       </div>
     </header>

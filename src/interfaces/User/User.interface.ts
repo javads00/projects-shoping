@@ -11,6 +11,23 @@ export interface UserInterface {
   updatedAt?: string | null;
 }
 
+export interface ProductShoping {
+  product: Array<{
+    id: string;
+    name: string;
+  }>;
+}
+
+export interface CreateProduct {
+  id: string | null;
+  name: string | null;
+}
+
+export interface TokenInterface {
+  refreshToken?: string | null;
+  accessToken?: string | null;
+}
+
 export interface FormLoginInterface {
   nationalCode: string;
   password: string;
@@ -23,4 +40,11 @@ export interface FormRegisterInterface extends FormLoginInterface {
 
 export interface HeaderInterface {
   user: UserInterface;
+}
+
+export interface SliderItemInterface {
+  createdAt: string;
+  image: string;
+  id: string;
+  name: string;
 }
